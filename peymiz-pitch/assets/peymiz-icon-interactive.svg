@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="tileGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="45%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#5b21b6"/>
+    </linearGradient>
+    <linearGradient id="tileShine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="doorGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+
+  <g class="icon-part icon-tile" data-part="tile">
+    <rect x="18" y="18" width="164" height="184" rx="36" fill="url(#tileGrad)"/>
+    <rect x="18" y="18" width="164" height="90" rx="36" fill="url(#tileShine)"/>
+    <rect x="18" y="18" width="164" height="184" rx="36" fill="none" stroke="#c4b5fd" stroke-width="4" opacity="0.5"/>
+  </g>
+
+  <g class="icon-part icon-roof" data-part="roof">
+    <path fill="#111" d="M48 62c0-8 6-14 14-14h76c8 0 14 6 14 14v6c0 4-2 8-6 10l-38 18c-4 2-8 2-12 0L54 78c-4-2-6-6-6-10v-6z"/>
+    <path fill="#111" d="M52 78h96c6 0 10 5 10 11s-4 9-10 9H52c-6 0-10-5-10-11s4-9 10-9z"/>
+  </g>
+
+  <g class="icon-part icon-frame" data-part="frame">
+    <path fill="none" stroke="#111" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"
+      d="M58 98h84v72c0 10-8 18-18 18H76c-10 0-18-8-18-18V98z"/>
+  </g>
+
+  <g class="icon-part icon-eye icon-eye-l" data-part="eye-l">
+    <path fill="none" stroke="#111" stroke-width="10" stroke-linecap="round" d="M78 118c8 10 16 10 24 0"/>
+  </g>
+
+  <g class="icon-part icon-eye icon-eye-r" data-part="eye-r">
+    <path fill="none" stroke="#111" stroke-width="10" stroke-linecap="round" d="M98 118c8 10 16 10 24 0"/>
+  </g>
+
+  <g class="icon-part icon-door" data-part="door">
+    <rect x="86" y="142" width="28" height="52" rx="14" fill="url(#doorGrad)"/>
+  </g>
+</svg>

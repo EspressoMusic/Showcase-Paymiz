@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>סטורמאסטר — ניהול חנויות ועסקים</title>
+  <meta name="description" content="אפליקציה חכמה לניהול מלאי, מכירות ודוחות — הכל במקום אחד." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- 1. Header -->
+  <header class="site-header" id="header">
+    <nav class="nav" aria-label="ניווט ראשי">
+      <a href="#hero" class="nav__link nav__link--active">בית</a>
+      <a href="#features" class="nav__link">יכולות</a>
+      <a href="#inventory" class="nav__link">מלאי</a>
+      <a href="#analytics" class="nav__link">דוחות</a>
+      <a href="#pricing" class="nav__link">מחירים</a>
+      <a href="#contact" class="nav__link">צור קשר</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 2. Hero -->
+    <section class="hero" id="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__content">
+        <p class="hero__eyebrow">ניהול עסקים · חכם ופשוט</p>
+        <h1 class="hero__title">ניהול חנות<br />במקום אחד</h1>
+        <p class="hero__subtitle">מלאי, מכירות, לקוחות ודוחות — באפליקציה אחת שמותאמת לעסק שלך.</p>
+        <a href="#pricing" class="btn btn--solid">התחל בחינם</a>
+      </div>
+      <div class="hero__visual">
+        <img
+          src="https://images.unsplash.com/photo-1556745750-68252f9ee0f8?w=900&q=80"
+          alt="בעל עסק משתמש באפליקציית ניהול על טאבלט בחנות"
+          width="520"
+          height="360"
+          loading="eager"
+        />
+      </div>
+    </section>
+
+    <!-- 3. Core benefits -->
+    <section class="section section--cream pillars" id="features">
+      <div class="container">
+        <h2 class="section__label">היכולות</h2>
+        <div class="pillars__grid">
+          <article class="pillar">
+            <div class="pillar__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="8" y="12" width="32" height="28" rx="2"/>
+                <path d="M16 12V8h16v4M20 24h8M20 30h12"/>
+              </svg>
+            </div>
+            <h3 class="pillar__title">מלאי חכם</h3>
+            <p class="pillar__text">מעקב בזמן אמת, התראות על מלאי נמוך וסריקת ברקוד מהירה.</p>
+          </article>
+          <span class="pillars__connector" aria-hidden="true"></span>
+          <article class="pillar">
+            <div class="pillar__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M10 36V20l14-8 14 8v16"/>
+                <path d="M24 12v24M18 28h12"/>
+              </svg>
+            </div>
+            <h3 class="pillar__title">מכירות וקופה</h3>
+            <p class="pillar__text">קופה דיגיטלית, חשבוניות ותשלומים — גם ללא אינטרנט.</p>
+          </article>
+          <span class="pillars__connector" aria-hidden="true"></span>
+          <article class="pillar">
+            <div class="pillar__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M8 36h32M12 28l8-12 8 8 8-16"/>
+              </svg>
+            </div>
+            <h3 class="pillar__title">דוחות ותובנות</h3>
+            <p class="pillar__text">גרפים ברורים, רווחיות לפי מוצר ותחזיות לעונות עמוסות.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Feature deep-dive: Inventory -->
+    <section class="section section--cream feature-split" id="inventory">
+      <div class="container feature-split__inner">
+        <div class="feature-split__media">
+          <img
+            src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=700&q=80"
+            alt="מחסן מסודר עם מדפים וקרטונים"
+            width="560"
+            height="420"
+            loading="lazy"
+          />
+        </div>
+        <div class="feature-split__copy">
+          <h2 class="feature-split__title">ניהול מלאי</h2>
+          <p class="feature-split__tagline">שליטה מלאה · בכל רגע</p>
+          <p class="feature-split__body">
+            עדכנו כמויות בלחיצה, הגדירו רמות מינימום וקבלו התראה לפני שנגמר המוצר.
+            סנכרון אוטומטי בין הסניף, המחסן והאתר — בלי גיליונות אקסל ובלי טעויות ידניות.
+          </p>
+          <a href="#pricing" class="btn btn--outline">גלה עוד</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Feature deep-dive: Analytics (reversed) -->
+    <section class="section section--cream feature-split feature-split--reverse" id="analytics">
+      <div class="container feature-split__inner">
+        <div class="feature-split__media">
+          <img
+            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&q=80"
+            alt="דשבורד אנליטיקה על מסך מחשב"
+            width="560"
+            height="420"
+            loading="lazy"
+          />
+        </div>
+        <div class="feature-split__copy">
+          <h2 class="feature-split__title">דוחות בזמן אמת</h2>
+          <p class="feature-split__tagline">החלטות מבוססות נתונים</p>
+          <p class="feature-split__body">
+            צפו במכירות היומיות, בהשוואה לתקופה קודמת ובמוצרים הרווחיים ביותר.
+            ייצוא ל-PDF או Excel בשנייה — מושלם לרואה חשבון ולצוות ההנהלה.
+          </p>
+          <a href="#pricing" class="btn btn--outline">גלה עוד</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Testimonials -->
+    <section class="section section--dark testimonials" id="testimonials">
+      <div class="container">
+        <h2 class="section__label section__label--light">מה הלקוחות אומרים</h2>
+        <div class="testimonials__grid">
+          <blockquote class="testimonial">
+            <p class="testimonial__quote">"חסכנו שעות בשבוע. המלאי מתעדכן לבד אחרי כל מכירה — סוף סוף שקט נפשי."</p>
+            <footer class="testimonial__author">
+              <strong>דנה כהן</strong>
+              <span>בוטיק אופנה, תל אביב</span>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial">
+            <p class="testimonial__quote">"העברנו שלושה סניפים לאפליקציה אחת. הדוחות המרוכזים שינו לנו את כללי המשחק."</p>
+            <footer class="testimonial__author">
+              <strong>יוסי לוי</strong>
+              <span>רשת מכולות, חיפה</span>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial">
+            <p class="testimonial__quote">"הקופה עובדת גם בלי WiFi. בימי שיא אנחנו לא מפספסים אף עסקה."</p>
+            <footer class="testimonial__author">
+              <strong>מיכל אברהם</strong>
+              <span>חנות אלקטרוניקה, באר שבע</span>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Pricing -->
+    <section class="section section--cream pricing" id="pricing">
+      <div class="container">
+        <h2 class="section__label">תוכניות ומחירים</h2>
+        <p class="section__intro">בחרו את החבילה המתאימה. שדרוג או ביטול בכל עת.</p>
+        <div class="pricing__grid">
+          <article class="price-card">
+            <h3 class="price-card__name">התחלה</h3>
+            <p class="price-card__price"><span class="price-card__amount">₪0</span><span class="price-card__period">/חודש</span></p>
+            <ul class="price-card__features">
+              <li>עד 100 מוצרים</li>
+              <li>קופה בסיסית</li>
+              <li>דוח יומי</li>
+            </ul>
+            <a href="#contact" class="btn btn--outline btn--block">התחל עכשיו</a>
+          </article>
+          <article class="price-card price-card--featured">
+            <span class="price-card__badge">פופולרי</span>
+            <h3 class="price-card__name">עסק</h3>
+            <p class="price-card__price"><span class="price-card__amount">₪149</span><span class="price-card__period">/חודש</span></p>
+            <ul class="price-card__features">
+              <li>מוצרים ללא הגבלה</li>
+              <li>מלאי + ברקוד</li>
+              <li>דוחות מתקדמים</li>
+              <li>תמיכה בצ'אט</li>
+            </ul>
+            <a href="#contact" class="btn btn--solid btn--block">בחר חבילה</a>
+          </article>
+          <article class="price-card">
+            <h3 class="price-card__name">רשת</h3>
+            <p class="price-card__price"><span class="price-card__amount">₪399</span><span class="price-card__period">/חודש</span></p>
+            <ul class="price-card__features">
+              <li>עד 10 סניפים</li>
+              <li>הרשאות צוות</li>
+              <li>API ואינטגרציות</li>
+              <li>מנהל חשבון ייעודי</li>
+            </ul>
+            <a href="#contact" class="btn btn--outline btn--block">דברו איתנו</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Integrations -->
+    <section class="section section--cream integrations" id="integrations">
+      <div class="container integrations__inner">
+        <h2 class="section__label">מתחבר לכלים שכבר בשימוש</h2>
+        <p class="section__intro">חשבוניות, סליקה, חנות אונליין ומערכות הנהלת חשבונות — הכל מסונכרן.</p>
+        <ul class="integrations__logos" aria-label="שותפי אינטגרציה">
+          <li><span class="integration-logo">Woo</span></li>
+          <li><span class="integration-logo">Shopify</span></li>
+          <li><span class="integration-logo">Priority</span></li>
+          <li><span class="integration-logo">Tranzila</span></li>
+          <li><span class="integration-logo">Google</span></li>
+          <li><span class="integration-logo">WhatsApp</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 9. FAQ -->
+    <section class="section section--cream faq" id="faq">
+      <div class="container faq__inner">
+        <h2 class="section__label">שאלות נפוצות</h2>
+        <div class="faq__list">
+          <details class="faq__item" open>
+            <summary>האם צריך ידע טכני כדי להתחיל?</summary>
+            <p>לא. ההתקנה לוקחת דקות, והממשק בעברית עם הדרכה מובנית לכל שלב.</p>
+          </details>
+          <details class="faq__item">
+            <summary>האם האפליקציה עובדת בלי אינטרנט?</summary>
+            <p>כן — מכירות ועדכון מלאי נשמרים מקומית ומסתנכרנים ברגע שחוזר החיבור.</p>
+          </details>
+          <details class="faq__item">
+            <summary>איך מעבירים נתונים ממערכת קודמת?</summary>
+            <p>ייבוא מ-Excel או חיבור ישיר למערכות נפוצות. הצוות שלנו מלווה בהעברה ללא עלות בתוכנית עסק.</p>
+          </details>
+          <details class="faq__item">
+            <summary>מה לגבי אבטחה וגיבוי?</summary>
+            <p>הנתונים מוצפנים, גיבוי יומי בענן, ותאימות לדרישות פרטיות מידע בישראל.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Footer + final CTA -->
+    <footer class="site-footer" id="contact">
+      <div class="footer__cta">
+        <h2 class="footer__cta-title">מוכנים לנהל את העסק בחכמה?</h2>
+        <p class="footer__cta-text">הצטרפו לאלפי בעלי עסקים שכבר עברו לסטורמאסטר.</p>
+        <a href="mailto:hello@stormaster.app" class="btn btn--solid">קבעו הדגמה חינם</a>
+      </div>
+      <div class="footer__main container">
+        <div class="footer__brand">
+          <span class="footer__logo">סטורמאסטר</span>
+          <p>ניהול חנויות ועסקים — פשוט, יפה, יעיל.</p>
+        </div>
+        <nav class="footer__links" aria-label="קישורי תחתית">
+          <a href="#features">יכולות</a>
+          <a href="#pricing">מחירים</a>
+          <a href="#faq">שאלות</a>
+          <a href="mailto:hello@stormaster.app">hello@stormaster.app</a>
+        </nav>
+        <div class="footer__social">
+          <a href="#" aria-label="פייסבוק">FB</a>
+          <a href="#" aria-label="אינסטגרם">IG</a>
+          <a href="#" aria-label="לינקדאין">IN</a>
+        </div>
+      </div>
+      <p class="footer__copy">© 2026 סטורמאסטר. כל הזכויות שמורות.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

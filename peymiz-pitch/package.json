@@ -1,0 +1,8 @@
+{
+  "name": "peymiz-pitch",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve -l 3456 --no-clipboard",
+    "open": "start http://localhost:3456"
+  }
+}

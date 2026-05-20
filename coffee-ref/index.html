@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brew Haven — Premium Coffee Shop</title>
+  <meta name="description" content="Brew Haven — premium handcrafted coffee. Beans roasted in-house, baristas trained by champions, atmosphere designed for inspiration." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="121.png" />
+  <link rel="apple-touch-icon" href="121.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Page Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-cup">
+      <div class="loader-steam"></div>
+      <div class="loader-steam"></div>
+      <div class="loader-steam"></div>
+      <div class="loader-cup-body">
+        <div class="loader-handle"></div>
+      </div>
+      <div class="loader-saucer"></div>
+    </div>
+    <p class="loader-text">Brewing your experience...</p>
+  </div>
+
+  <!-- Falling coffee beans background (decorative) -->
+  <div class="beans-bg" aria-hidden="true">
+    <span class="bean b1"></span>
+    <span class="bean b2"></span>
+    <span class="bean b3"></span>
+    <span class="bean b4"></span>
+    <span class="bean b5"></span>
+    <span class="bean b6"></span>
+    <span class="bean b7"></span>
+    <span class="bean b8"></span>
+  </div>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">
+        <span class="logo-mark">
+          <img src="121.png" alt="Brew Haven" />
+        </span>
+        <span class="logo-text">Brew<span>Haven</span></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#story">Story</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-primary nav-cta" id="orderBtn">Order Now</button>
+        <button class="search-btn" aria-label="Search">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="home">
+    <!-- Wavy decorative shapes -->
+    <div class="hero-waves">
+      <svg class="wave wave-left" viewBox="0 0 600 800" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,0 C160,120 60,300 140,460 C220,620 80,720 0,800 L0,0 Z" fill="rgba(96,165,250,0.08)"/>
+        <path d="M0,0 C120,140 30,320 110,500 C190,660 50,760 0,800 L0,0 Z" fill="rgba(96,165,250,0.05)"/>
+      </svg>
+      <svg class="wave wave-right" viewBox="0 0 700 900" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M700,0 C520,120 640,260 560,420 C480,580 620,720 700,900 L700,0 Z" fill="rgba(59,130,246,0.18)"/>
+        <path d="M700,40 C540,160 660,300 580,460 C500,620 640,760 700,900 L700,40 Z" fill="rgba(59,130,246,0.12)"/>
+        <path d="M700,80 C560,200 680,340 600,500 C520,660 660,800 700,900 L700,80 Z" fill="rgba(96,165,250,0.07)"/>
+      </svg>
+    </div>
+
+    <!-- Floating dots -->
+    <div class="dots">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span>
+    </div>
+
+    <!-- Leaf -->
+    <svg class="leaf" viewBox="0 0 200 200" aria-hidden="true">
+      <path d="M100,10 C140,40 170,90 170,140 C170,170 140,190 100,190 C60,190 30,170 30,140 C30,90 60,40 100,10 Z" fill="rgba(96,165,250,0.18)"/>
+      <path d="M100,30 L100,180" stroke="rgba(96,165,250,0.35)" stroke-width="1.5" fill="none"/>
+      <path d="M100,60 C120,70 130,80 140,100 M100,80 C120,90 130,100 145,120 M100,100 C120,110 130,120 145,140 M100,120 C115,130 125,140 138,158 M100,50 C80,60 70,75 60,95 M100,75 C80,85 70,100 55,118 M100,100 C80,110 70,125 55,143 M100,125 C82,135 72,148 60,162" stroke="rgba(96,165,250,0.35)" stroke-width="1" fill="none"/>
+    </svg>
+
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="eyebrow" data-reveal>Since 2008 — Roasted with love</span>
+        <h1 class="hero-title" data-reveal>
+          <span class="title-line">Coffee</span>
+          <span class="title-line">Shop</span>
+        </h1>
+        <p class="hero-sub" data-reveal>
+          Where every cup tells a story. Single-origin beans, slow-roasted in our
+          micro-roastery, brewed by award-winning baristas inside a space designed
+          to feel like home. Discover what coffee was always meant to taste like.
+        </p>
+
+        <!-- Mini menu -->
+        <div class="mini-menu" data-reveal>
+          <h3 class="mini-title-1">Beans</h3>
+          <h3 class="mini-title-2">Cocktails</h3>
+
+          <div class="mini-card">
+            <div class="mini-icon">
+              <svg viewBox="0 0 64 64" width="30" height="30" fill="none" stroke="#60a5fa" stroke-width="2"><path d="M22 18h20l-3 36H25z"/><path d="M22 18c0-4 4-6 10-6s10 2 10 6"/></svg>
+            </div>
+            <h4>Dairy Latte</h4>
+            <p>Velvety steamed milk, double espresso, hints of caramel.</p>
+          </div>
+
+          <div class="mini-card">
+            <div class="mini-icon">
+              <svg viewBox="0 0 64 64" width="30" height="30" fill="none" stroke="#60a5fa" stroke-width="2"><path d="M18 22h28l-3 34H21z"/><path d="M46 26h4a4 4 0 0 1 0 12h-4"/></svg>
+            </div>
+            <h4>Choco Dream</h4>
+            <p>Belgian chocolate, espresso, marshmallow clouds on top.</p>
+          </div>
+
+          <div class="mini-card">
+            <div class="mini-icon">
+              <svg viewBox="0 0 64 64" width="30" height="30" fill="none" stroke="#60a5fa" stroke-width="2"><path d="M20 14h24l-2 8H22z"/><path d="M22 22h20l-3 32H25z"/></svg>
+            </div>
+            <h4>Smart Sip</h4>
+            <p>Cold brew tonic with citrus zest and tonka syrup.</p>
+          </div>
+        </div>
+
+        <div class="hero-cta" data-reveal>
+          <button class="btn btn-primary btn-big">
+            <span>See Menu</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          <a href="#story" class="btn btn-ghost">Our Story</a>
+        </div>
+      </div>
+
+      <!-- Cup illustration -->
+      <div class="hero-visual" data-reveal>
+        <div class="cup-wrap" id="cupWrap">
+          <!-- Glow halo behind cup -->
+          <div class="cup-glow"></div>
+
+          <!-- Steam -->
+          <div class="steam">
+            <span></span><span></span><span></span>
+          </div>
+
+          <!-- Actual cup image -->
+          <img src="121.png" alt="Picasow Coffee Cup" class="cup-image" id="cupImage" />
+
+          <!-- Soft shadow under cup -->
+          <div class="cup-shadow"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+      <div class="mouse"><div class="wheel"></div></div>
+      <span>Scroll to explore</span>
+    </a>
+  </section>
+
+  <!-- ===================== MARQUEE ===================== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>★ Single Origin</span>
+      <span>★ Slow Roasted</span>
+      <span>★ Hand Pulled</span>
+      <span>★ Fair Trade</span>
+      <span>★ Cold Brewed</span>
+      <span>★ Award Winning</span>
+      <span>★ Locally Sourced</span>
+      <span>★ Single Origin</span>
+      <span>★ Slow Roasted</span>
+      <span>★ Hand Pulled</span>
+      <span>★ Fair Trade</span>
+      <span>★ Cold Brewed</span>
+      <span>★ Award Winning</span>
+      <span>★ Locally Sourced</span>
+    </div>
+  </div>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="about-visual" data-reveal>
+        <div class="img-stack">
+          <div class="img-card img-1"></div>
+          <div class="img-card img-2"></div>
+          <div class="img-card img-3"></div>
+          <div class="years-badge">
+            <strong>15</strong>
+            <span>Years of <br/> Craft</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-content">
+        <span class="section-eyebrow" data-reveal>About Brew Haven</span>
+        <h2 class="section-title" data-reveal>A passion for the <em>perfect</em> cup.</h2>
+        <p class="section-lead" data-reveal>
+          Brew Haven started in 2008 as a tiny corner stand with one stubborn idea —
+          coffee deserves to be treated as an art form. Today we operate our own
+          micro-roastery, source directly from farmers in 7 countries, and serve
+          over 1,800 cups of joy every single day.
+        </p>
+        <div class="features">
+          <div class="feature" data-reveal>
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 7v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V7l-8-5z"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <div>
+              <h4>Ethically Sourced</h4>
+              <p>Direct trade relationships with farmers across Ethiopia, Colombia, Brazil and Kenya.</p>
+            </div>
+          </div>
+          <div class="feature" data-reveal>
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            </div>
+            <div>
+              <h4>Roasted Fresh Daily</h4>
+              <p>Every bean we serve was roasted no more than 72 hours before it touched your cup.</p>
+            </div>
+          </div>
+          <div class="feature" data-reveal>
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+            </div>
+            <div>
+              <h4>Champion Baristas</h4>
+              <p>Our team includes finalists from World Latte Art and Brewers Cup championships.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STATS ===================== -->
+  <section class="stats">
+    <div class="container stats-grid">
+      <div class="stat" data-reveal>
+        <strong class="counter" data-target="1875">0</strong>
+        <span>Cups served daily</span>
+      </div>
+      <div class="stat" data-reveal>
+        <strong class="counter" data-target="42">0</strong>
+        <span>Unique blends</span>
+      </div>
+      <div class="stat" data-reveal>
+        <strong class="counter" data-target="15">0</strong>
+        <span>Years of craft</span>
+      </div>
+      <div class="stat" data-reveal>
+        <strong class="counter" data-target="98">0</strong>
+        <span>% happy customers</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MENU ===================== -->
+  <section class="menu" id="menu">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-eyebrow" data-reveal>Our Menu</span>
+        <h2 class="section-title center" data-reveal>Crafted to <em>perfection</em></h2>
+        <p class="section-lead center" data-reveal>
+          From morning espresso to late-night cold brew cocktails — every drink on
+          our menu has been refined hundreds of times until we got it just right.
+        </p>
+      </div>
+
+      <div class="menu-tabs" data-reveal>
+        <button class="tab active" data-cat="hot">Hot Coffee</button>
+        <button class="tab" data-cat="cold">Cold Brews</button>
+        <button class="tab" data-cat="dessert">Desserts</button>
+        <button class="tab" data-cat="snack">Snacks</button>
+      </div>
+
+      <div class="menu-grid" id="menuGrid">
+        <!-- HOT -->
+        <article class="menu-card" data-cat="hot" data-reveal>
+          <div class="menu-card-inner">
+            <div class="menu-img img-espresso"></div>
+            <div class="menu-info">
+              <h3>Classic Espresso</h3>
+              <p>Bold, concentrated, our house blend pulled at 9 bars of pressure.</p>
+              <div class="menu-meta">
+                <span class="rating">★ 4.9</span>
+                <span class="price">$3.20</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="menu-card" data-cat="hot" data-reveal>
+          <div class="menu-card-inner">
+            <div class="menu-img img-cappuccino"></div>
+            <div class="menu-info">
+              <h3>Caramel Cappuccino</h3>
+              <p>Silky microfoam, sweet caramel ribbons, dusting of cocoa.</p>
+              <div class="menu-meta">
+                <span class="rating">★ 4.8</span>
+                <span class="price">$4.50</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="menu-card" data-cat="hot" data-reveal>
+          <div class="menu-card-inner">
+            <div class="menu-img img-flatwhite"></div>
+            <div class="menu-info">
+              <h3>Vanilla Flat White</h3>
+              <p>Two shots, velvety steamed milk, Madagascar vanilla.</p>
+              <div class="menu-meta">
+                <span class="rating">★ 4.9</span>
+                <span class="price">$4.80</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- COLD -->
+        <article class="menu-card hidden" data-cat="cold" data-reveal>
+          <div class="menu-card-inner">
+            <div class="menu-img img-icedmocha"></div>
+            <div class="menu-info">
+              <h3>Iced Mocha Storm</h3>
+              <p>Cold brew, dark chocolate, oat milk, served over crushed ice.</p>
+              <div class="menu-meta">
+                <span class="rating">★ 4.7</span>
+                <span class="price">$5.20</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="menu-card hidden" data-cat="cold" data-reveal>
+          <div class="menu-card-inner">
+            <div class="menu-img img-tonic"></div>
+            <div class="menu-info">
+              <h3>Tonic Cold Brew</h3>
+              <p>24-hour steeped cold brew topped with citrus tonic water.</p>
+              <div class="menu-meta">
+                <span class="rating">★ 4.8</span>
+                <span class="price">$5.40</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="menu-card hidden" data-cat="cold" data-reveal>
+          <div class="menu-card-inner">
+            <div class="menu-img img-frozen"></div>
+            <div class="menu-info">
+              <h3>Frozen Caramel</h3>
+              <p>Blended ice, espresso, caramel sauce, whipped clouds.</p>
+              <div class="menu-meta">
+                <span class="rating">★ 4.9</span>
+                <span class="price">$5.90</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- DESSERT -->
+        <article class="menu-card hidden" data-cat="dessert" data-reveal>
+          <div class="menu-card-inner">
+            <div class="menu-img img-affogato"></div>
+            <div class="menu-info">
+              <h3>Affogato Classico</h3>
+              <p>Vanilla bean gelato drowned in a shot of hot espresso.</p>
+              <div class="menu-meta">
+                <span class="rating">★ 5.0</span>
+                <span class="price">$6.20</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="menu-card hidden" data-cat="dessert" data-reveal>
+          <div class="menu-card-inner">
+            <div class="menu-img img-tiramisu"></div>
+            <div class="menu-info">
+              <h3>Tiramisu Cup</h3>
+              <p>Mascarpone, lady fingers, espresso, dusted with cocoa.</p>
+              <div class="menu-meta">
+                <span class="rating">★ 4.9</span>
+                <span class="price">$6.80</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="menu-card hidden" data-cat="dessert" data-reveal>
+          <div class="menu-card-inner">
+            <div class="menu-img img-chocolava"></div>
+            <div class="menu-info">
+              <h3>Choco Lava Cake</h3>
+              <p>Warm Belgian chocolate center, salted caramel, gelato.</p>
+              <div class="menu-meta">
+                <span class="rating">★ 4.9</span>
+                <span class="price">$7.20</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- SNACK -->
+        <article class="menu-card hidden" data-cat="snack" data-reveal>
+          <div class="menu-card-inner">
+            <div class="menu-img img-croissant"></div>
+            <div class="menu-info">
+              <h3>Almond Croissant</h3>
+              <p>Buttery, flaky, filled with frangipane and toasted almonds.</p>
+              <div class="menu-meta">
+                <span class="rating">★ 4.8</span>
+                <span class="price">$4.50</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="menu-card hidden" data-cat="snack" data-reveal>
+          <div class="menu-card-inner">
+            <div class="menu-img img-avotoast"></div>
+            <div class="menu-info">
+              <h3>Avocado Toast</h3>
+              <p>Sourdough, smashed avocado, chili oil, soft-boiled egg.</p>
+              <div class="menu-meta">
+                <span class="rating">★ 4.7</span>
+                <span class="price">$8.90</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="menu-card hidden" data-cat="snack" data-reveal>
+          <div class="menu-card-inner">
+            <div class="menu-img img-cookie"></div>
+            <div class="menu-info">
+              <h3>Pistachio Cookie</h3>
+              <p>Sea-salt pistachio cookie, soft-baked, fudgy center.</p>
+              <div class="menu-meta">
+                <span class="rating">★ 4.9</span>
+                <span class="price">$3.20</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STORY (Parallax) ===================== -->
+  <section class="story" id="story">
+    <div class="story-parallax">
+      <div class="parallax-layer p-bg"></div>
+      <div class="parallax-layer p-mid"></div>
+      <div class="parallax-layer p-front"></div>
+    </div>
+    <div class="container story-content">
+      <span class="section-eyebrow light" data-reveal>From bean to cup</span>
+      <h2 class="section-title light" data-reveal>Our journey is your <em>flavor</em></h2>
+      <div class="timeline">
+        <div class="t-line"></div>
+        <div class="t-item" data-reveal>
+          <div class="t-dot">01</div>
+          <div class="t-body">
+            <h4>Sourcing</h4>
+            <p>We fly twice a year to coffee farms in Ethiopia, Brazil, Colombia and Kenya — meeting growers, cupping micro-lots, and selecting only the top 5%.</p>
+          </div>
+        </div>
+        <div class="t-item" data-reveal>
+          <div class="t-dot">02</div>
+          <div class="t-body">
+            <h4>Roasting</h4>
+            <p>Our 12kg drum roaster is operated daily by certified Q-graders. Each origin gets its own roast curve, captured down to the second.</p>
+          </div>
+        </div>
+        <div class="t-item" data-reveal>
+          <div class="t-dot">03</div>
+          <div class="t-body">
+            <h4>Brewing</h4>
+            <p>From V60 pour-overs to 24-hour cold drips — our baristas master 11 brewing methods. Every drink is calibrated by refractometer.</p>
+          </div>
+        </div>
+        <div class="t-item" data-reveal>
+          <div class="t-dot">04</div>
+          <div class="t-body">
+            <h4>Serving</h4>
+            <p>Served in a space designed by award-winning architects, on ceramics handmade by local artisans. Your cup. Your moment.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GALLERY ===================== -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-eyebrow" data-reveal>Gallery</span>
+        <h2 class="section-title center" data-reveal>Step <em>inside</em> Brew Haven</h2>
+        <p class="section-lead center" data-reveal>Take a peek at the textures, light, and details that make our space feel like coming home.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="g-item g-1" data-reveal></div>
+        <div class="g-item g-2" data-reveal></div>
+        <div class="g-item g-3" data-reveal></div>
+        <div class="g-item g-4" data-reveal></div>
+        <div class="g-item g-5" data-reveal></div>
+        <div class="g-item g-6" data-reveal></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== REVIEWS ===================== -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-eyebrow" data-reveal>Reviews</span>
+        <h2 class="section-title center" data-reveal>Loved by <em>thousands</em></h2>
+      </div>
+      <div class="reviews-track" id="reviewsTrack">
+        <article class="review-card" data-reveal>
+          <div class="quote">"</div>
+          <p>"Honestly the best flat white I've had outside of Melbourne. The baristas know their craft, and the space feels like a Pinterest dream board."</p>
+          <div class="reviewer">
+            <div class="avatar a1"></div>
+            <div>
+              <strong>Sarah Levin</strong>
+              <span>Designer · Tel Aviv</span>
+            </div>
+          </div>
+          <div class="stars">★★★★★</div>
+        </article>
+        <article class="review-card" data-reveal>
+          <div class="quote">"</div>
+          <p>"I work from Brew Haven three times a week. Great Wi-Fi, never-ending power outlets, but it's the cinnamon cold brew that keeps me hooked."</p>
+          <div class="reviewer">
+            <div class="avatar a2"></div>
+            <div>
+              <strong>David Cohen</strong>
+              <span>Founder · Remote</span>
+            </div>
+          </div>
+          <div class="stars">★★★★★</div>
+        </article>
+        <article class="review-card" data-reveal>
+          <div class="quote">"</div>
+          <p>"A friend dragged me here once. Now I'm the friend doing the dragging. The Choco Dream is a religious experience — I refuse to elaborate."</p>
+          <div class="reviewer">
+            <div class="avatar a3"></div>
+            <div>
+              <strong>Maya Ben-David</strong>
+              <span>Food Blogger</span>
+            </div>
+          </div>
+          <div class="stars">★★★★★</div>
+        </article>
+        <article class="review-card" data-reveal>
+          <div class="quote">"</div>
+          <p>"Their attention to detail is insane — the cups, the playlist, even the temperature of the milk. Coffee shops should be taking notes."</p>
+          <div class="reviewer">
+            <div class="avatar a4"></div>
+            <div>
+              <strong>Jonathan Klein</strong>
+              <span>Architect</span>
+            </div>
+          </div>
+          <div class="stars">★★★★★</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA / NEWSLETTER ===================== -->
+  <section class="cta-section">
+    <div class="container cta-inner">
+      <div class="cta-content" data-reveal>
+        <h2 class="section-title light">Get <em>10% off</em> your first order.</h2>
+        <p>Join our weekly newsletter — new blends, brewing tips and surprise giveaways. We promise: no spam, just good coffee.</p>
+      </div>
+      <form class="cta-form" data-reveal onsubmit="event.preventDefault(); this.querySelector('button').textContent='Welcome aboard ✦'; this.querySelector('input').value=''">
+        <input type="email" placeholder="Your email address" required />
+        <button class="btn btn-primary" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT / FOOTER ===================== -->
+  <footer id="contact">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="#home" class="logo logo-foot">
+          <span class="logo-mark">
+            <img src="121.png" alt="Brew Haven" />
+          </span>
+          <span class="logo-text">Brew<span>Haven</span></span>
+        </a>
+        <p>Crafting your daily ritual since 2008. Find us in the heart of the city — or order online for delivery in under 30 minutes.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg></a>
+          <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M22 5.8c-.7.3-1.5.6-2.4.7.9-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1A4.1 4.1 0 0 0 11.8 9c0 .3 0 .6.1.9A11.7 11.7 0 0 1 3.4 5.6a4.1 4.1 0 0 0 1.3 5.5c-.7 0-1.3-.2-1.8-.5v.1c0 2 1.4 3.6 3.3 4-.7.2-1.4.2-2 .1.5 1.7 2.1 2.9 4 2.9A8.2 8.2 0 0 1 2 19.4 11.6 11.6 0 0 0 8.3 21c7.5 0 11.7-6.3 11.7-11.7v-.5c.8-.6 1.5-1.3 2-2z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M22 8.3a2.6 2.6 0 0 0-1.8-1.8C18.5 6 12 6 12 6s-6.5 0-8.2.5A2.6 2.6 0 0 0 2 8.3 27 27 0 0 0 1.5 12 27 27 0 0 0 2 15.7a2.6 2.6 0 0 0 1.8 1.8C5.5 18 12 18 12 18s6.5 0 8.2-.5a2.6 2.6 0 0 0 1.8-1.8 27 27 0 0 0 .5-3.7 27 27 0 0 0-.5-3.7zM10 15V9l5 3-5 3z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Visit Us</h4>
+        <p><strong>Brew Haven Flagship</strong><br/>14 Rothschild Blvd<br/>Tel Aviv, 6688118</p>
+        <p><strong>Hours</strong><br/>Mon–Fri: 6:30 — 23:00<br/>Sat–Sun: 8:00 — 00:00</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Gift Cards</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>hello@brewhaven.coffee<br/>+972 3-555-0100</p>
+        <form class="foot-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Sent ✓'; this.reset()">
+          <textarea placeholder="Write us a quick note..." rows="3" required></textarea>
+          <button class="btn btn-primary" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 Brew Haven. Crafted with passion, espresso and a little caffeine jitter.</p>
+        <div>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-top" id="backTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

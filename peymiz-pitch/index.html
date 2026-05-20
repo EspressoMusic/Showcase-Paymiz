@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content" />
+  <meta name="theme-color" content="#060d18" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>Peymiz — מצגת משקיעים</title>
+  <meta name="description" content="Peymiz — אפליקציה פשוטה לעסקים קטנים. הזמנות, תורים, פניות ודשבורד במקום אחד." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Assistant:wght@600;700;800&display=swap"
+    rel="stylesheet"
+    media="print"
+    onload="this.media='all'"
+  />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@600;700;800&display=swap" rel="stylesheet" />
+  </noscript>
+  <link rel="stylesheet" href="styles.css?v=letters1" />
+  <link rel="preload" href="assets/peymiz-wordmark.png" as="image" />
+  <link rel="icon" href="assets/peymiz-wordmark.png" type="image/png" />
+</head>
+<body>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <div class="loader" id="loader">
+    <a href="#opening" class="logo-mark logo-mark--loader logo-wordmark-wrap" aria-label="Peymiz" dir="ltr" lang="en">
+      <img src="assets/peymiz-wordmark.png" alt="Peymiz" class="logo-wordmark logo-wordmark--loader" width="280" height="68" />
+    </a>
+    <div class="loader-bar"></div>
+  </div>
+
+
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#opening" class="logo logo-mark logo-mark--nav logo-wordmark-wrap" aria-label="Peymiz" dir="ltr" lang="en">
+        <img src="assets/peymiz-wordmark.png" alt="Peymiz" class="logo-wordmark logo-wordmark--nav" width="100" height="24" />
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#opening">פתיחה</a>
+        <a href="#problem">בעיה</a>
+        <a href="#solution">פתרון</a>
+        <a href="#simplicity">פשטות</a>
+        <a href="#how">תהליך</a>
+        <a href="#modes">מצבים</a>
+        <a href="#customer">לקוח</a>
+        <a href="#owner">מנהל</a>
+        <a href="#different">בידול</a>
+        <a href="#vision">חזון</a>
+        <a href="#investment">השקעה</a>
+      </nav>
+      <a href="#investment" class="nav-cta">השקעה</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="תפריט"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="#investment" class="mobile-nav-cta">השקעה</a>
+    <a href="#opening">פתיחה</a>
+    <a href="#problem">בעיה</a>
+    <a href="#solution">פתרון</a>
+    <a href="#simplicity">פשטות</a>
+    <a href="#how">תהליך</a>
+    <a href="#modes">מצבים</a>
+    <a href="#customer">לקוח</a>
+    <a href="#owner">מנהל</a>
+    <a href="#different">בידול</a>
+    <a href="#vision">חזון</a>
+    <a href="#investment">השקעה</a>
+  </nav>
+
+  <!-- שקף 1 -->
+  <section class="hero" id="opening">
+    <div class="dots" aria-hidden="true">
+      <span style="top:12%;right:8%"></span><span style="top:25%;right:22%"></span>
+      <span style="top:60%;right:5%"></span><span style="top:80%;left:15%"></span>
+    </div>
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="section-num" data-reveal>שקף 01 — פתיחה</span>
+        <h1 class="hero-title" data-reveal>
+          <span class="line accent hero-wordmark-line" dir="ltr" lang="en">
+            <img src="assets/peymiz-wordmark.png" alt="Peymiz" class="logo-wordmark logo-wordmark--hero" width="340" height="82" />
+          </span>
+          <span class="line">אפליקציה פשוטה לעסקים קטנים</span>
+        </h1>
+        <p class="section-lead" data-reveal>אפליקציה פשוטה שעוזרת לעסקים קטנים לקבל הזמנות, תורים ופניות מלקוחות — ולנהל הכול במקום אחד.</p>
+        <p class="section-body" data-reveal>Peymiz נבנית בשביל עסקים קטנים שרוצים להיראות מקצועיים, להישאר מסודרים, ולהפסיק לנהל את כל העסק דרך וואטסאפ, טלפונים, פתקים ואקסלים.</p>
+        <p class="section-body" data-reveal>כל עסק מקבל עמוד דיגיטלי משלו, קישור ללקוחות ודשבורד ניהול פשוט.</p>
+      </div>
+      <div class="hero-visual hero-visual--logo-only" data-reveal>
+        <a href="#opening" class="hero-logo-only" id="heroIcon" aria-label="לוגו Peymiz">
+          <img src="assets/peymiz-icon-purple.png" alt="" class="hero-logo-img" width="320" height="320" fetchpriority="high" decoding="async" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- שקף 2 -->
+  <section id="problem">
+    <a href="#opening" class="logo-mark logo-deco pos-s-bl size-md float-b" aria-hidden="true"><img src="assets/peymiz-logo.png" alt="" /></a>
+    <div class="container">
+      <span class="section-num" data-reveal>שקף 02 — הבעיה</span>
+      <h2 class="section-title" data-reveal>עסקים קטנים עובדים קשה, אבל הרבה פעמים הכול מתנהל בבלאגן.</h2>
+      <p class="section-lead" data-reveal>עסקים קטנים מקבלים הזמנות ופניות מכל מקום: וואטסאפ, שיחות טלפון, הודעות, פתקים ואקסלים.</p>
+      <p class="section-body" data-reveal>בהתחלה זה נראה פשוט, אבל מהר מאוד זה נהיה מבולגן. לקוח אחד מזמין בהודעה, לקוח אחר מתקשר, לקוח שלישי מבקש תור — ובעל העסק צריך לזכור הכול לבד.</p>
+      <div class="cards cols-2">
+        <article class="pitch-card"><h3>הזמנות הולכות לאיבוד</h3><p>כשכל דבר מגיע ממקום אחר, קל לשכוח משהו.</p></article>
+        <article class="pitch-card"><h3>לקוחות מחכים לתשובה</h3><p>בעל העסק עסוק ולא תמיד מספיק לענות בזמן.</p></article>
+        <article class="pitch-card"><h3>תורים מתבלבלים</h3><p>בלי מערכת אחת ברורה, תורים יכולים להתנגש או להישכח.</p></article>
+        <article class="pitch-card"><h3>אין תמונה ברורה</h3><p>בעל העסק לא תמיד יודע מה פתוח, מה טופל ומה עדיין מחכה.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- שקף 3 -->
+  <section id="solution">
+    <a href="#opening" class="logo-mark logo-deco pos-s-tr size-sm float-d" aria-hidden="true"><img src="assets/peymiz-logo.png" alt="" /></a>
+    <div class="container">
+      <span class="section-num" data-reveal>שקף 03 — הפתרון</span>
+      <h2 class="section-title" data-reveal>Peymiz מסדרת את הלקוחות, ההזמנות, התורים והפניות במקום אחד פשוט.</h2>
+      <p class="section-body" data-reveal>בעל העסק יוצר עמוד עסק בתוך Peymiz, מקבל קישור ציבורי, ושולח אותו ללקוחות.</p>
+      <p class="section-body" data-reveal>הלקוח פותח את הקישור ורואה את העסק. אם זה עסק של מוצרים — הלקוח יכול להזמין. אם זה עסק של שירותים — הלקוח יכול לקבוע תור. אם יש שאלה — הוא שולח פנייה. הכול נכנס לדשבורד של בעל העסק.</p>
+      <div class="cards cols-2">
+        <article class="pitch-card"><h3>עמוד לקוח ברור</h3><p>הלקוח פותח קישור ומבין מיד מה לעשות.</p></article>
+        <article class="pitch-card"><h3>ניהול הזמנות</h3><p>כל ההזמנות נשמרות במקום אחד מסודר.</p></article>
+        <article class="pitch-card"><h3>קביעת תורים</h3><p>שעות פנויות ותפוסות מוצגות בצורה ברורה.</p></article>
+        <article class="pitch-card"><h3>פניות לקוחות</h3><p>שאלות ובקשות של לקוחות מנוהלות במקום אחד.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- שקף 4 -->
+  <section id="simplicity">
+    <a href="#opening" class="logo-mark logo-deco pos-s-tl size-xs float-a" aria-hidden="true"><img src="assets/peymiz-logo.png" alt="" /></a>
+    <div class="container">
+      <span class="section-num" data-reveal>שקף 04 — הפשטות</span>
+      <h2 class="section-title" data-reveal>Peymiz לא מנסה להיות המערכת הכי גדולה. היא מנסה להיות המערכת שבעל עסק קטן באמת ישתמש בה.</h2>
+      <p class="section-body" data-reveal>הרבה מערכות לעסקים מרגישות כבדות מדי — יותר מדי כפתורים, הגדרות ודברים ללמוד. Peymiz נבנית הפוך: פשוט, ברור, נקי ומהיר.</p>
+      <p class="section-body" data-reveal>המטרה היא שבעל עסק קטן יפתח את האפליקציה ומיד יבין איפה ההזמנות, איפה התורים, איפה הלקוחות, ואיך לשתף את הקישור של העסק.</p>
+      <div class="cards cols-2">
+        <article class="pitch-card"><h3>בלי הדרכה ארוכה</h3><p>בעל העסק לא צריך קורס כדי להשתמש במערכת.</p></article>
+        <article class="pitch-card"><h3>בלי עומס במסך</h3><p>מראים רק את הדברים החשובים באמת.</p></article>
+        <article class="pitch-card"><h3>מתחילים מהר</h3><p>פותחים עסק ומתחילים לשתף קישור במהירות.</p></article>
+        <article class="pitch-card"><h3>מתאים גם למי שלא טכנולוגי</h3><p>המערכת מיועדת לבעלי עסקים רגילים, לא רק לאנשים טכניים.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- שקף 5 -->
+  <section id="how">
+    <a href="#opening" class="logo-mark logo-deco pos-s-br size-md float-c" aria-hidden="true"><img src="assets/peymiz-logo.png" alt="" /></a>
+    <div class="container">
+      <span class="section-num" data-reveal>שקף 05 — איך זה עובד</span>
+      <h2 class="section-title" data-reveal>יוצרים עסק, בוחרים סוג פעילות, משתפים קישור ומנהלים הכול מהדשבורד.</h2>
+      <p class="section-body" data-reveal>בעל העסק נכנס ל־Peymiz, יוצר עסק, בוחר שם וקישור, ואז בוחר מה הלקוחות יראו: חנות מוצרים או מערכת קביעת תורים. אחרי זה הוא משתף את הקישור — וכל פעולה של לקוח מופיעה בדשבורד.</p>
+      <div class="steps">
+        <div class="step-card"><div class="num">1</div><h3>יצירת עסק</h3><p>בעל העסק יוצר עמוד עסק עם שם וקישור.</p></div>
+        <div class="step-card"><div class="num">2</div><h3>בחירת מצב עסק</h3><p>חנות מוצרים או קביעת תורים.</p></div>
+        <div class="step-card"><div class="num">3</div><h3>שיתוף הקישור</h3><p>בוואטסאפ, אינסטגרם או בכל מקום אחר.</p></div>
+        <div class="step-card"><div class="num">4</div><h3>ניהול במקום אחד</h3><p>כל פעולת לקוח מופיעה בדשבורד מסודר.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- שקף 6 -->
+  <section id="modes">
+    <a href="#opening" class="logo-mark logo-deco pos-s-tr size-lg float-b" aria-hidden="true"><img src="assets/peymiz-logo.png" alt="" /></a>
+    <div class="container">
+      <span class="section-num" data-reveal>שקף 06 — שני מצבי עסק</span>
+      <h2 class="section-title" data-reveal>Peymiz מתאימה גם לעסקים שמוכרים מוצרים וגם לעסקים שעובדים לפי תורים.</h2>
+      <p class="section-body" data-reveal>מאפייה צריכה הזמנות, מספרה צריכה תורים. Peymiz מאפשרת לבעל העסק לבחור מה הלקוחות יראו. ברירת המחדל: חנות מוצרים. עסק תורים — מחליפים למצב קביעת תורים מהדשבורד.</p>
+      <div class="split">
+        <div class="split-panel light" data-reveal>
+          <h3>חנות מוצרים</h3>
+          <p class="section-body">מתאים למאפיות, בגדים, מתנות, אוכל ביתי וחנויות קטנות. הלקוח רואה מוצרים ומבצע הזמנה.</p>
+        </div>
+        <div class="split-panel dark" data-reveal>
+          <h3>קביעת תורים</h3>
+          <p class="section-body">מתאים למספרות, יועצים, שיעורים, טיפולים ועסקי שירות. הלקוח קובע תור בלחיצה.</p>
+        </div>
+      </div>
+      <div class="cards cols-2" style="margin-top:32px">
+        <article class="pitch-card"><h3>בחירה של המנהל</h3><p>בעל העסק מחליט איך העסק שלו יוצג ללקוחות.</p></article>
+        <article class="pitch-card"><h3>מערכת אחת להרבה סוגי עסקים</h3><p>לא צריך לבנות אפליקציה נפרדת לכל סוג עסק.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- שקף 7 -->
+  <section id="customer">
+    <a href="#opening" class="logo-mark logo-deco pos-s-bl size-sm float-d" aria-hidden="true"><img src="assets/peymiz-logo.png" alt="" /></a>
+    <div class="container">
+      <span class="section-num" data-reveal>שקף 07 — חוויית הלקוח</span>
+      <h2 class="section-title" data-reveal>הלקוח לא צריך ללמוד מערכת. הוא פשוט פותח קישור ועושה פעולה.</h2>
+      <p class="section-body" data-reveal>הלקוח מקבל קישור, פותח אותו ורואה את העסק — מוצרים להזמנה, תורים לקביעה, או פנייה לעזרה.</p>
+      <div class="cards cols-2">
+        <article class="pitch-card"><h3>מוצרים ברורים</h3><p>שם מוצר, מחיר, תמונה וכפתור הזמנה.</p></article>
+        <article class="pitch-card"><h3>תורים ברורים</h3><p>שעות פנויות ושעות תפוסות בצורה קלה להבנה.</p></article>
+        <article class="pitch-card"><h3>פעולה מהירה</h3><p>להזמין, לקבוע תור או ליצור קשר.</p></article>
+        <article class="pitch-card"><h3>פחות שיחות מיותרות</h3><p>הלקוח לא צריך שיחה ארוכה כדי להבין מה לעשות.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- שקף 8 -->
+  <section id="owner">
+    <a href="#opening" class="logo-mark logo-deco pos-s-tl size-md float-a" aria-hidden="true"><img src="assets/peymiz-logo.png" alt="" /></a>
+    <div class="container">
+      <span class="section-num" data-reveal>שקף 08 — דשבורד המנהל</span>
+      <h2 class="section-title" data-reveal>בעל העסק מקבל דשבורד פשוט שמראה לו מה קורה בעסק.</h2>
+      <p class="section-body" data-reveal>הזמנות, תורים, פניות, לקוחות, מוצרים, סטטוסים וסיכומים — במקום אחד. בעתיד: כניסת עובדים עם הרשאות מוגבלות.</p>
+      <div class="cards cols-2">
+        <article class="pitch-card"><h3>הזמנות חדשות</h3><p>לראות מה נכנס ומה דורש טיפול.</p></article>
+        <article class="pitch-card"><h3>תורים קרובים</h3><p>לדעת מי מגיע ומתי.</p></article>
+        <article class="pitch-card"><h3>פניות לקוחות</h3><p>שאלות ובקשות במקום מסודר.</p></article>
+        <article class="pitch-card"><h3>כניסת עובדים בעתיד</h3><p>עובדים יעזרו בניהול עם הרשאות מוגבלות.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- שקף 9 -->
+  <section id="different">
+    <a href="#opening" class="logo-mark logo-deco pos-s-br size-xs float-b" aria-hidden="true"><img src="assets/peymiz-logo.png" alt="" /></a>
+    <div class="container">
+      <span class="section-num" data-reveal>שקף 09 — למה Peymiz שונה</span>
+      <h2 class="section-title" data-reveal>Peymiz היא הדרך הפשוטה ביותר לעסק קטן להיראות מקצועי ולקבל לקוחות.</h2>
+      <p class="section-body" data-reveal>יש כלים לתורים, לחנות, ל-CRM — אבל עסקים קטנים לא רוצים חמש מערכות. Peymiz מחברת קישור, עמוד עסק, הזמנות, תורים, פניות ודשבורד נקי.</p>
+      <p class="section-body" data-reveal><strong>ההבדל המרכזי:</strong> תחושה של אפליקציה מקצועית משלו — בלי עלות גבוהה, בלי מורכבות ובלי עקומת למידה.</p>
+      <div class="cards cols-2">
+        <article class="pitch-card"><h3>לא רק תורים</h3><p>גם מוצרים וגם תורים באותה מערכת.</p></article>
+        <article class="pitch-card"><h3>לא רק חנות</h3><p>גם תורים, פניות וניהול עסק.</p></article>
+        <article class="pitch-card"><h3>לא רק וואטסאפ</h3><p>Peymiz מסדרת את הפעולות העסקיות עצמן.</p></article>
+        <article class="pitch-card"><h3>לא אפליקציה אישית יקרה</h3><p>תחושת אפליקציה משלו בלי פיתוח יקר.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- שקף 10 -->
+  <section id="vision">
+    <a href="#opening" class="logo-mark logo-deco pos-s-tr size-md float-c" aria-hidden="true"><img src="assets/peymiz-logo.png" alt="" /></a>
+    <div class="container">
+      <span class="section-num" data-reveal>שקף 10 — חזון עתידי</span>
+      <h2 class="section-title" data-reveal>Peymiz יכולה לגדול מכלי פשוט לניהול עסק לאקו־סיסטם שלם לעסקים קטנים.</h2>
+      <p class="section-body" data-reveal>השלב הראשון: הזמנות, תורים, לקוחות ופניות. בעתיד — עובדים והרשאות, ומרקטפלייס B2B בין עסקים לספקים.</p>
+      <div class="cards cols-2">
+        <article class="pitch-card"><h3>כניסת עובדים</h3><p>הרשאות מוגבלות לצוות.</p></article>
+        <article class="pitch-card"><h3>ניהול צוות</h3><p>מי מטפל במה — בשליטה מלאה.</p></article>
+        <article class="pitch-card"><h3>מרקטפלייס B2B</h3><p>עסקים מבקשים הצעות מספקים.</p></article>
+        <article class="pitch-card"><h3>שכבות הכנסה עתידיות</h3><p>עמלות, מנויי ספקים וקידום הצעות.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- שקף 11 -->
+  <section id="investment">
+    <a href="#opening" class="logo-mark logo-deco pos-s-bl size-lg float-d" aria-hidden="true"><img src="assets/peymiz-logo.png" alt="" /></a>
+    <div class="container">
+      <span class="section-num" data-reveal>שקף 11 — הזדמנות השקעה</span>
+      <h2 class="section-title" data-reveal>אני מחפש השקעה מוקדמת כדי להפוך בסיס עובד למוצר אמיתי עם עסקים אמיתיים.</h2>
+      <p class="section-body" data-reveal>כבר נבנה בסיס: פתיחת עסק, קישורים, מוצרים, תורים, דשבורד, Supabase, אבטחה ולינקים חכמים. השלב הבא: מוצר יציב, בדיקות עם עסקים אמיתיים, לקוחות משלמים ראשונים.</p>
+      <div class="invest-box" data-reveal>
+        <p style="margin:0 0 8px;font-size:22px;color:var(--muted)">השקעה מבוקשת</p>
+        <div class="invest-amount">$50,000</div>
+        <p class="invest-meta">15% מהמיזם / החברה שתוקם</p>
+        <p style="margin-top:24px;font-size:20px;color:var(--muted)">יעד ל־6 חודשים: 10–20 עסקים בפיילוט · 3–5 לקוחות משלמים ראשונים</p>
+      </div>
+      <div class="cards cols-2" style="margin-top:40px">
+        <article class="pitch-card"><h3>פיתוח מוצר</h3><p>השלמת פיצ׳רים ושיפור יציבות.</p></article>
+        <article class="pitch-card"><h3>עיצוב ו-UX</h3><p>פשוט, יפה וברור.</p></article>
+        <article class="pitch-card"><h3>בדיקות עם עסקים</h3><p>ללמוד ממשתמשים אמיתיים.</p></article>
+        <article class="pitch-card"><h3>שיווק ראשוני</h3><p>להגיע לעסקים קטנים.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <a href="#opening" class="logo-mark logo-deco pos-s-tr size-xl float-a" aria-hidden="true"><img src="assets/peymiz-logo.png" alt="" /></a>
+    <a href="#opening" class="logo-mark logo-deco pos-s-bl size-sm float-b" aria-hidden="true"><img src="assets/peymiz-logo.png" alt="" /></a>
+    <div class="container">
+      <h2 class="cta-title" data-reveal>Peymiz נותנת לעסק קטן דרך פשוטה להיראות מקצועי, לקבל לקוחות ולנהל הכול במקום אחד.</h2>
+      <div class="btn-row" data-reveal>
+        <a href="mailto:investors@peymiz.app" class="btn btn-primary">צור קשר</a>
+        <a href="#opening" class="btn btn-outline">חזרה לראש</a>
+      </div>
+      <p style="margin-top:48px;color:var(--muted);font-size:16px" data-reveal>Peymiz · סודי — לעיון משקיעים בלבד</p>
+    </div>
+  </section>
+
+  <button class="back-top" id="backTop" aria-label="למעלה">↑</button>
+
+  <script src="script.js?v=mobile3" defer></script>
+</body>
+</html>
