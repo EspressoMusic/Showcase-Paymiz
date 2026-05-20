@@ -337,3 +337,135 @@ if ("requestIdleCallback" in window) {
 } else {
   setTimeout(runEnhancements, 1);
 }
+
+/*─ Confetti בסוף המצגת (שקף סיום) ── */
+let confettiFired = false;
+let logoConfettiShape = null;
+
+const CONFETTI_COLORS = ["#3b82f6", "#60a5fa", "#93c5fd", "#7c3aed", "#c4b5fd", "#ffffff"];
+
+function loadLogoConfettiShape(confettiFn) {
+  if (logoConfettiShape) return Promise.resolve(logoConfettiShape);
+  return new Promise((resolve) => {
+    const img = new Image();
+    img.onload = () => {
+      try {
+        if (typeof confettiFn.shapeFromImage === "function") {
+          logoConfettiShape = confettiFn.shapeFromImage(img);
+        }
+      } catch (e) {
+        logoConfettiShape = null;
+      }
+      resolve(logoConfettiShape);
+    };
+    img.onerror = () => resolve(null);
+    img.src = "assets/peymiz-icon-purple.png";
+  });
+}
+
+function launchEndConfetti() {
+  if (confettiFired || prefersReducedMotion) return;
+  const confettiFn = window.confetti;
+  if (typeof confettiFn !== "function") return;
+  confettiFired = true;
+
+  const scale = isMobile ? 0.6 : 1;
+  const z = 10001;
+
+  loadLogoConfettiShape(confettiFn).then((logo) => {
+    const mixedShapes = logo ? [logo, "circle", "square"] : ["circle", "square"];
+
+    confettiFn({
+      particleCount: Math.floor(140 * scale),
+      spread: 110,
+      startVelocity: 48,
+      origin: { x: 0.5, y: 0.42 },
+      colors: CONFETTI_COLORS,
+      shapes: mixedShapes,
+      scalar: 1.05,
+      zIndex: z,
+    });
+
+    setTimeout(() => {
+      confettiFn({
+        particleCount: Math.floor(100 * scale),
+        angle: 58,
+        spread: 72,
+        origin: { x: 0.02, y: 0.55 },
+        colors: CONFETTI_COLORS,
+        shapes: mixedShapes,
+        zIndex: z,
+      });
+      confettiFn({
+        particleCount: Math.floor(100 * scale),
+        angle: 122,
+        spread: 72,
+        origin: { x: 0.98, y: 0.55 },
+        colors: CONFETTI_COLORS,
+        shapes: mixedShapes,
+        zIndex: z,
+      });
+    }, 180);
+
+    const duration = isMobile ? 3000 : 5000;
+    const end = Date.now() + duration;
+    const rain = setInterval(() => {
+      const useLogo = logo && Math.random() < 0.38;
+      confettiFn({
+        particleCount: Math.floor((useLogo ? 5 : 14) * scale),
+        startVelocity: useLogo ? 30 : 24,
+        spread: useLogo ? 95 : 65,
+        ticks: useLogo ? 240 : 170,
+        gravity: useLogo ? 0.62 : 1,
+        shapes: useLogo ? [logo] : mixedShapes,
+        scalar: useLogo ? (isMobile ? 1.3 : 1.85) : 1,
+        colors: CONFETTI_COLORS,
+        origin: { x: Math.random(), y: Math.random() * 0.32 },
+        zIndex: z,
+      });
+      if (Date.now() > end) clearInterval(rain);
+    }, 100);
+
+    if (logo) {
+      const logoBursts = isMobile ? 10 : 18;
+      for (let i = 0; i < logoBursts; i++) {
+        setTimeout(() => {
+          confettiFn({
+            particleCount: Math.floor(7 * scale),
+            spread: 120,
+            startVelocity: 34,
+            ticks: 260,
+            gravity: 0.68,
+            shapes: [logo],
+            scalar: isMobile ? 1.35 : 2,
+            origin: { x: 0.1 + Math.random() * 0.8, y: 0.08 + Math.random() * 0.22 },
+            zIndex: z,
+          });
+        }, 350 + i * 260);
+      }
+    }
+  });
+}
+
+const closingSection = document.getElementById("closing");
+if (closingSection && !prefersReducedMotion) {
+  const confettiObserver = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          launchEndConfetti();
+          confettiObserver.disconnect();
+        }
+      }
+    },
+    { threshold: 0.22, rootMargin: "0px 0px -8% 0px" }
+  );
+  confettiObserver.observe(closingSection);
+
+  if (location.hash === "#closing" || location.hash === "#investment") {
+    requestAnimationFrame(() => {
+      const rect = closingSection.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.85) launchEndConfetti();
+    });
+  }
+}
