@@ -8,6 +8,36 @@ const isMobile =
 
 if (isMobile) document.body.classList.add("is-mobile");
 
+/* Theme toggle — אור / חושך */
+const THEME_KEY = "peymiz-theme";
+const themeToggle = document.getElementById("themeToggle");
+const themeMeta = document.querySelector('meta[name="theme-color"]');
+
+function getTheme() {
+  return document.documentElement.getAttribute("data-theme") === "light" ? "light" : "dark";
+}
+
+function applyTheme(theme) {
+  const isLight = theme === "light";
+  if (isLight) {
+    document.documentElement.setAttribute("data-theme", "light");
+  } else {
+    document.documentElement.removeAttribute("data-theme");
+  }
+  themeToggle?.setAttribute("aria-checked", String(isLight));
+  if (themeMeta) themeMeta.content = isLight ? "#f0f4fa" : "#060d18";
+  try {
+    localStorage.setItem(THEME_KEY, theme);
+  } catch (e) {}
+}
+
+const initialTheme = getTheme();
+applyTheme(initialTheme);
+
+themeToggle?.addEventListener("click", () => {
+  applyTheme(getTheme() === "light" ? "dark" : "light");
+});
+
 /* Loader — short on mobile so nothing blocks the screen */
 function hideLoader() {
   document.getElementById("loader")?.classList.add("gone");

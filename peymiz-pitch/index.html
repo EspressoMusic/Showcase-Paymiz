@@ -19,9 +19,18 @@
   <noscript>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@600;700;800&display=swap" rel="stylesheet" />
   </noscript>
-  <link rel="stylesheet" href="styles.css?v=letters1" />
+  <link rel="stylesheet" href="styles.css?v=theme1" />
   <link rel="preload" href="assets/peymiz-wordmark.png" as="image" />
   <link rel="icon" href="assets/peymiz-wordmark.png" type="image/png" />
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem("peymiz-theme") === "light") {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
 
@@ -94,7 +103,7 @@
       </div>
       <div class="hero-visual hero-visual--logo-only" data-reveal>
         <a href="#opening" class="hero-logo-only" id="heroIcon" aria-label="לוגו Peymiz">
-          <img src="assets/peymiz-icon-purple.png" alt="" class="hero-logo-img" width="320" height="320" fetchpriority="high" decoding="async" />
+          <img src="assets/peymiz-icon-purple.png" alt="" class="hero-logo-img" width="260" height="260" fetchpriority="high" decoding="async" />
         </a>
       </div>
     </div>
@@ -291,8 +300,25 @@
     </div>
   </section>
 
+  <aside class="theme-switch" id="themeSwitch" aria-label="מצב תצוגה">
+    <div class="theme-switch-card">
+      <span class="theme-switch-label" id="themeLabelLight">אור</span>
+      <button
+        type="button"
+        class="theme-switch-track"
+        id="themeToggle"
+        role="switch"
+        aria-checked="false"
+        aria-labelledby="themeLabelLight themeLabelDark"
+      >
+        <span class="theme-switch-thumb" aria-hidden="true"></span>
+      </button>
+      <span class="theme-switch-label" id="themeLabelDark">חושך</span>
+    </div>
+  </aside>
+
   <button class="back-top" id="backTop" aria-label="למעלה">↑</button>
 
-  <script src="script.js?v=mobile3" defer></script>
+  <script src="script.js?v=theme1" defer></script>
 </body>
 </html>
