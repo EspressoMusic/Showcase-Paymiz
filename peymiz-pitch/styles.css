@@ -1585,7 +1585,8 @@ section .logo-deco {
   }
 
   .hero-visual {
-    order: 2;
+    order: -1;
+    width: 100%;
   }
 
   .hero-title {
@@ -1618,9 +1619,18 @@ section .logo-deco {
     height: clamp(24px, 6vw, 40px);
   }
 
-  /* לוגו בכותרת בלבד — בלי כפילות גדולה */
+  /* לוגו סגול גדול — ראשון במסך, בולט */
   .hero-visual--logo-only {
-    display: none !important;
+    display: flex !important;
+    min-height: auto;
+    padding: 0 0 20px;
+    margin-bottom: 4px;
+  }
+
+  .hero-logo-only {
+    width: min(92vw, 340px);
+    margin-inline: auto;
+    animation: none;
   }
 
   .hero {
@@ -1807,6 +1817,23 @@ body.is-mobile .mobile-nav a {
 body.is-mobile .hero-grid {
   display: flex;
   flex-direction: column;
+}
+
+body.is-mobile .hero-visual--logo-only {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  order: -1;
+}
+
+body.is-mobile .hero-logo-only {
+  width: min(92vw, 340px);
+  margin-inline: auto;
+  animation: none;
+}
+
+body.is-mobile .hero-copy {
+  order: 1;
 }
 
 body.is-mobile .hero-logo-img {
@@ -2031,36 +2058,44 @@ body.loaded [data-reveal].visible {
 }
 
 @media (max-width: 1099px) {
+  /* בטלפון — פינה ימנית תחתונה, לא מעל הטקסט */
   .theme-switch {
-    left: max(10px, env(safe-area-inset-left));
+    left: auto;
+    right: max(10px, env(safe-area-inset-right));
     top: auto;
-    bottom: max(88px, calc(72px + env(safe-area-inset-bottom)));
+    bottom: max(20px, env(safe-area-inset-bottom));
     transform: none;
+    z-index: 90;
   }
 
   .theme-switch-card {
-    padding: 16px 14px;
-    gap: 10px;
+    padding: 12px 10px;
+    gap: 8px;
+    border-radius: 12px;
   }
 
   .theme-switch-label {
-    font-size: 18px;
+    font-size: 15px;
   }
 
   .theme-switch-track {
-    width: 46px;
-    height: 78px;
+    width: 40px;
+    height: 68px;
   }
 
   .theme-switch-thumb {
-    width: 36px;
-    height: 30px;
-    margin-left: -18px;
-    top: calc(100% - 36px);
+    width: 32px;
+    height: 26px;
+    margin-left: -16px;
+    top: calc(100% - 32px);
   }
 
   .theme-switch-track[aria-checked="true"] .theme-switch-thumb {
-    top: 5px;
+    top: 4px;
+  }
+
+  .back-top.show {
+    bottom: max(100px, calc(88px + env(safe-area-inset-bottom)));
   }
 }
 
